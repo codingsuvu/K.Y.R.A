@@ -1,0 +1,14 @@
+.message.user {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.message.user .bubble {
+  background: #2f2f2f;
+  color: white;
+  padding: 12px 14px;
+  border-radius: 16px;
+  max-width: 70%;
+  font-size: 14px;
+}

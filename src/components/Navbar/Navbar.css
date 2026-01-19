@@ -1,0 +1,31 @@
+.navbar {
+  height: 56px;
+  background: #1a1a1a;
+  color: white;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.offer {
+  margin-left: auto;
+  background: #6a5acd;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+}
