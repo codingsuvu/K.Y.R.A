@@ -1,39 +1,37 @@
-import { Menu, X } from "lucide-react";
+import ChatHistory from "./ChatHistory";
 import "./Sidebar.css";
+import { RiChatNewLine } from "react-icons/ri";
+import { IoImage, IoApps } from "react-icons/io5";
+import { GoProjectTemplate } from "react-icons/go";
+import { FaToggleOn } from "react-icons/fa";
 
-export default function Sidebar({ isOpen, toggleSidebar }) {
+export default function Sidebar({ open, closeSidebar, toggleSidebar }) {
+  const chats = [
+    "Self tuning PFC unit",
+    "React UI with CSS",
+    "ChatGPT clone design",
+    "Final year project ideas"
+  ];
+
   return (
-    <aside className={`sidebar ${isOpen ? "open" : "closed"}`}>
-      {/* Header */}
+    <aside className={`sidebar ${open ? "open" : ""}`}>
       <div className="sidebar-header">
-        {isOpen && <h1 className="logo-text">T.I.V.A.</h1>}
-
-        {/* SINGLE toggle button */}
-        <button className="toggle-btn" onClick={toggleSidebar}>
-          {isOpen ? <X size={20} /> : <Menu size={20} />}
+        <h2 className="logo">T.I.V.A.</h2>
+        <button className="close-btn" onClick={toggleSidebar}>
+          <FaToggleOn />
         </button>
       </div>
 
-      {/* Content only visible when open */}
-      {isOpen && (
-        <>
-          <button className="new-chat">+ New chat</button>
+      <button className="new-chat"><RiChatNewLine /> New chat</button>
 
-          <nav className="sidebar-nav">
-            <span>Images</span>
-            <span>Apps</span>
-            <span>Projects</span>
-          </nav>
+      <nav className="menu">
+        <div className="menu-item"><IoImage /> Images</div>
+        <div className="menu-item"><IoApps /> Apps</div>
+        <div className="menu-item"><GoProjectTemplate /> Projects</div>
+        
+      </nav>
 
-          <div className="recent">
-            <p className="recent-title">Recent</p>
-            <p>Self tuning PFC unit</p>
-            <p>React UI with CSS</p>
-            <p>ChatGPT clone design</p>
-            <p>Final year project ideas</p>
-          </div>
-        </>
-      )}
+      <ChatHistory chats={chats} />
     </aside>
   );
 }
