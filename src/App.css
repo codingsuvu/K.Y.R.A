@@ -3,9 +3,10 @@
 .app {
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #0f0f0f;
   overflow: hidden;
+  color: #ececf1;
 }
 
 /* Main content area (right side) */
@@ -14,4 +15,5 @@
   display: flex;
   flex-direction: column;
   background-color: #181818;
+  overflow-y: auto;
 }
