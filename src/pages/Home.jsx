@@ -34,6 +34,7 @@ export default function Home() {
         setActiveChat={setActiveChat}
         closeSidebar={() => setSidebarOpen(false)}
       />
+      {sidebarOpen && <div className="overlay" onClick={() => setSidebarOpen(false)} />}
 
       <div className="main">
         <Navbar toggleSidebar={() => setSidebarOpen((prev) => !prev)} />
