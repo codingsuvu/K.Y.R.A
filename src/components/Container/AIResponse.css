@@ -5,8 +5,8 @@
 }
 
 .message.ai .bubble {
-  background: #1f1f1f;
-  color: white;
+  background: #d6d7dc;
+  color: rgb(234, 230, 238);
   padding: 12px 14px;
   border-radius: 16px;
   max-width: 70%;

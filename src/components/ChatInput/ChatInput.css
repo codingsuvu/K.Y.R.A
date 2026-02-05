@@ -24,14 +24,14 @@
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: rgb(239, 239, 242);
   font-size: 15px;
   padding: 10px;
 }
 
 /* Placeholder color */
 .input-box input::placeholder {
-  color: #9e9e9e;
+  color: #f9f9fa;
 }
 
 /* Icon buttons */
@@ -50,5 +50,5 @@
 }
 
 .icon-btn:hover {
-  background: #4a4a4a;
+  background: #ebebed;
 }
